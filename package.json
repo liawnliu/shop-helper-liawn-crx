@@ -1,0 +1,55 @@
+{
+  "name": "shop-helper-liawn-crx",
+  "license": "MIT",
+  "scripts": {
+    "watch": "webpack --progress --mode development --watch",
+    "commit": "git add . && git-cz",
+    "commit:ignore": "git add . && git-cz -n"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "core-js": "^3.21.1",
+    "element-plus": "^2.1.0",
+    "git-cz": "^4.9.0",
+    "vue": "^3.2.31",
+    "vue-clipboard3": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@iconify-json/ep": "^1.1.10",
+    "@types/chrome": "0.0.225",
+    "@types/node": "^17.0.25",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-env": "^1.18.0",
+    "@vespaiach/axios-fetch-adapter": "^0.2.2",
+    "axios": "^0.26.1",
+    "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "less": "^3.11.1",
+    "less-loader": "^10.2.0",
+    "lint-staged": "^12.3.7",
+    "path-browserify": "^1.0.1",
+    "pinia": "^2.0.13",
+    "prettier": "^2.6.2",
+    "style-loader": "^3.3.1",
+    "sucrase": "^3.20.3",
+    "typescript": "^4.6.2",
+    "unplugin-auto-import": "^0.15.2",
+    "unplugin-icons": "^0.15.3",
+    "unplugin-vue-components": "^0.18.5",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^17.0.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
+  }
+}

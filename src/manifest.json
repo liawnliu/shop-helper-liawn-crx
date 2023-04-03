@@ -1,0 +1,69 @@
+{
+    "manifest_version": 3,
+    "name": "商家助手",
+    "version": "1.0.0",
+    "description": "商家助手",
+    "content_security_policy": {
+        "script-src": "self",
+        "object-src": "self"
+    },
+    "icons": {
+        "16": "static/img/icon.png",
+        "19": "static/img/icon.png",
+        "38": "static/img/icon.png",
+        "48": "static/img/icon.png",
+        "128": "static/img/icon.png"
+    },
+    "action": {
+        "default_icon": "static/img/icon.png",
+        "default_title": "助手",
+        "default_popup": "popup.html"
+    },
+    "options_page": "option.html",
+    "background": {
+        "service_worker": "background.main.js"
+    },
+    "content_scripts": [{
+        "matches": [
+          "*://*.chengji-inc.com/*", "*://*.1688.com/*", "*://*.jiancent.com/*", "*://*.jinritemai.com/*"
+        ],
+        "css": [],
+        "js": ["content.main.js"],
+        "run_at": "document_end"
+    }, {
+      "matches": [
+        "*://*.1688.com/*"
+      ],
+      "css": [],
+      "js": ["content_xhr.main.js"],
+      "run_at": "document_start"
+    }],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "contextMenus",
+        "webRequest",
+        "tabs",
+        "activeTab",
+        "notifications",
+        "storage",
+        "unlimitedStorage",
+        "downloads",
+        "cookies",
+        "management",
+        "webNavigation"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "my_xhr.main.js"
+        ],
+        "matches": [
+          "*://*.1688.com/*"
+        ]
+      }
+    ]
+}
